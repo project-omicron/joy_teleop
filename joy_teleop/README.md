@@ -12,3 +12,5 @@ How to start the node:
 4. rosrun joy joy_node  
 5. rosparam load  teleop_tools/joy_teleop/config/joy_teleop.yaml  
 6. rosrun joy_teleop joy_teleop.py  
+  
+For more info visit: http://ros-developer.com/2017/07/28/control-your-robot-with-a-joystick-in-ros/
