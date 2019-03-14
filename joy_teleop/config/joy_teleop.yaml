@@ -1,0 +1,22 @@
+# The config file that will take the values from the PS4 joystick
+# and publish to the topics: steering and throttling.
+# 
+
+teleop:
+  throttling:
+    type: topic
+    message_type: std_msgs/Float64
+    topic_name: throttling
+    axis_mappings:
+      -
+        axis: 1
+        target: data
+
+  steering:
+    type: topic
+    message_type: std_msgs/Float64
+    topic_name: steering
+    axis_mappings:
+      -
+        axis: 2
+        target: data
