@@ -15,6 +15,5 @@
   <run_depend>sensor_msgs</run_depend>
   <run_depend>rospy</run_depend>
   <run_depend>rostopic</run_depend>
-  <run_depend>teleop_tools_msgs</run_depend>
 
 </package>
