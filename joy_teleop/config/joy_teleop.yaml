@@ -8,17 +8,17 @@ teleop:
     type: topic
     message_type: ackermann_msgs/AckermannDriveStamped
     topic_name: low_level/ackermann_cmd_mux/input/teleop
-    deadman_buttons: [4]
+#    deadman_buttons: [4]
     axis_mappings:
       -
         axis: 1
         target: drive.speed
-        scale: 2.0                   # joystick will command plus or minus 2 meters / second
+        scale: 1.0                   # joystick will command plus or minus 2 meters / second
         offset: 0.0
       -
-        axis: 3
+        axis: 2
         target: drive.steering_angle
-        scale: 0.34                  # joystick will command plus or minus ~20 degrees steering angle
+        scale: 0.51                  # joystick will command plus or minus ~20 degrees steering angle
         offset: 0.0
         
 #   throttling:
