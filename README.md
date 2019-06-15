@@ -1,10 +1,16 @@
-teleop_tools
-============
+joy_teleop
+==========
 
-A set of generic teleoperation tools for any robot.
+A configurable node to map joystick controls to robot teleoperation commands
 
-This contains the following teleoperation tools:
+How to start the node:
 
-* `joy_teleop`, a generic joystick interface for topics and actions
-* `key_teleop`, a lightweight console keyboard teleoperation utility
-* `mouse_teleop`, a pointing device (e.g. mouse, touchpad) teleoperation utility
+0. cd <catkin_work_space/src>  
+1. git clone <github.com/<path-to-package>.git>  
+2. cd .. & catkin_make install;  
+3. roscore  
+4. rosrun joy joy_node  
+5. rosparam load  teleop_tools/joy_teleop/config/joy_teleop.yaml  
+6. rosrun joy_teleop joy_teleop.py  
+  
+For more info visit: http://ros-developer.com/2017/07/28/control-your-robot-with-a-joystick-in-ros/
