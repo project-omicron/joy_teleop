@@ -25,7 +25,7 @@ teleop:
     service_name: /record_topics
     service_request:
       name: recorder
-      topics: [/low_level/ackermann_cmd_mux/input/teleop,/raspicam_node/image/compressed]
+      topics: [/ackermann_cmd_mux/input/teleop,/raspicam_node/image/compressed]
     buttons: [0,4]
     service_persistent: False
 
