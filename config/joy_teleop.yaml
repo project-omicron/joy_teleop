@@ -10,12 +10,12 @@ teleop:
     topic_name: ackermann_cmd_mux/input/human_driver
     axis_mappings:
       -
-        axis: 1
+        axis: 4
         target: drive.speed
         scale: 1.0                   # joystick will command plus or minus 2 meters / second
         offset: 0.0
       -
-        axis: 2
+        axis: 0
         target: drive.steering_angle
         scale: 0.51                  # joystick will command plus or minus ~20 degrees steering angle
         offset: 0.0
@@ -39,7 +39,7 @@ teleop:
 
   select_human_control:
     type: service
-    service_name: /ackermann_cmd_mux/output_select 
+    service_name: /mux/select
     service_request:
       topic: /ackermann_cmd_mux/input/human_driver
     buttons: [0,5]
@@ -47,7 +47,7 @@ teleop:
 
   select_ai_control:
     type: service
-    service_name: /ackermann_cmd_mux/output_select 
+    service_name: /mux/select
     service_request:
       topic: /ackermann_cmd_mux/input/ai_driver
     buttons: [1,5]
