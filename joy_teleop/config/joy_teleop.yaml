@@ -20,7 +20,25 @@ teleop:
         target: drive.steering_angle
         scale: 0.51                  # joystick will command plus or minus ~20 degrees steering angle
         offset: 0.0
-        
+
+  start_recording:
+    type: service
+    service_name: /record_topics
+    service_request:
+      name: recorder
+      topics: [/joy]
+    buttons: [0]
+    service_persistent: False
+
+  stop_recording:
+    type: service
+    service_name: /stop_recording
+    service_request:
+      name: recorder
+    buttons: [1]
+    service_persistent: False
+
+
 #   throttling:
 #     type: topic
 #     message_type: std_msgs/Float64
