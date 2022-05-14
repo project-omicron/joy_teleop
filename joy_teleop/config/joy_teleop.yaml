@@ -8,7 +8,6 @@ teleop:
     type: topic
     message_type: ackermann_msgs/AckermannDriveStamped
     topic_name: ackermann_cmd_mux/input/human_driver
-#    deadman_buttons: [4]
     axis_mappings:
       -
         axis: 1
@@ -37,6 +36,24 @@ teleop:
       name: recorder
     buttons: [1,4]
     service_persistent: False
+
+  select_human_control:
+    type: service
+    service_name: /ackermann_cmd_mux/output_select 
+    service_request:
+      topic: /ackermann_cmd_mux/input/human_driver
+    buttons: [0,5]
+    service_persistent: False
+
+  select_ai_control:
+    type: service
+    service_name: /ackermann_cmd_mux/output_select 
+    service_request:
+      topic: /ackermann_cmd_mux/input/ai_driver
+    buttons: [1,5]
+    service_persistent: False
+
+
 
 
 #   throttling:
